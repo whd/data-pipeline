@@ -25,7 +25,7 @@ decoder = "Multi"
 [PipelineBudget]
 type = "SandboxFilter"
 filename = "lua_filters/dollars.lua"
-message_matcher = "Logger == 'PayloadSize' && Type == 'heka.sandbox.payload_size'"
+message_matcher = "(Logger == 'PayloadSize' && Type == 'heka.sandbox.payload_size') || Type == 'payload_size'"
 output_limit = 0
 instruction_limit = 0
 memory_limit = 0
